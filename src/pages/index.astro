@@ -1,11 +1,60 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home">
+  <main>
+    <div>
+      <h2 class="mb-4 text-2xl font-bold">About me</h2>
+      <p class="mb-4">
+        I am a Full Stack Developer with an interest in cutting-edge technology!
+      </p>
+      <p class="mb-4">
+        Currently, I'm a professional full stack web developer, but I write blog
+        posts about all sorts of tech in my own time. I also work on some
+        personal projects for to learn new things.
+      </p><p class="mb-4">
+        Here are some facts about me:
+        <ul>
+          <li>
+            <span class="mr-2">🌍</span>Based in Rotterdam, The Netherlands.
+          </li>
+          <li>
+            <span class="mr-2">🎓</span>BSc in Information Technology from the
+            Rotterdam University of Applied Sciences
+          </li>
+          <li>
+            <span class="mr-2">💼</span>Professionally working with TypeScript
+            and Angular.
+          </li>
+          <li>
+            <span class="mr-2">🦀</span>Currently learning the Rust programming
+            language.
+          </li>
+          <li>
+            <span class="mr-2">🤓</span>Check out my technical blog on
+            <a href="https://mbvissers.medium.com" target="_blank">Medium!</a>
+          </li>
+          <li>
+            <span class="mr-2">📌</span>Check out my <a
+              href="https://github.com/mbvissers"
+              target="_blank">GitHub</a
+            > profile to see some of my work!
+          </li>
+        </ul>
+      </p>
+      This website is open source. Check it out <a
+        href="https://github.com/mbvissers/portfolio"
+        target="_blank">the repository</a
+      >!
+    </div>
+  </main>
 </Layout>
+
+<style>
+  @reference "../styles/global.css";
+
+  li {
+    @apply mb-4 ml-2;
+  }
+</style>

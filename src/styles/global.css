@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+
+@layer base {
+    html {
+        @apply bg-slate-100 p-4
+    }
+
+    a {
+        @apply text-blue-500
+    }
+
+    a:visited {
+        @apply text-purple-500
+    }
+
+    h2 {
+        @apply text-2xl font-bold
+    }
+}

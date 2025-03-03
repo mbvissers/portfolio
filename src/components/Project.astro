@@ -1,0 +1,29 @@
+
+---
+interface Props {
+  title: string,
+  description: string,
+  url: string,
+}
+
+const {title, description, url} = Astro.props
+---
+
+
+<li class="project">
+  <h5 class="title">{title}</h5>
+  <span class="description">{description}</span>
+  <span class="link"><a href={url} target="_blank">Check it out!</a></span>
+</li>
+
+<style>
+  @reference "../styles/global.css";
+
+  li.project {
+    @apply mb-4;
+  }
+
+  li.project > .title {
+    @apply text-xl font-bold;
+  }
+</style>

@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
+
+const projects = [
+  {
+    "title": "Arkana",
+    "description": "Arkana is a flashcard application for in the CLI. It is written in Rust and uses the Clap and Ratatui libraries.",
+    "url": "https://github.com/mbvissers/arkana"
+  },
+  {
+    "title": "Portfolio",
+    "description": "This portfolio website is one of the projects! Created to have a place to showcase my little projects. Written in Astro and styled with Tailwind.",
+    "url": "https://github.com/mbvissers/portfolio"
+  },
+  {
+    "title": "Dotfiles",
+    "description": "My dotfiles are a public repository featuring some of my configuration files for my workstation.",
+    "url": "https://github.com/mbvissers/dotfiles"
+  }
+]
+---
+
+<Layout title="Projects">
+  <main>
+    <div>
+      <h2 class="mb-4 text-2xl font-bold">Projects</h2>
+      <p class="mb-4">
+        This page features some of my personal projects. 
+      </p>
+      <p class="mb-4">
+        Reasons for these projects range from learning a new 
+        programming language or framework, to having an interest in a topic and playing around with that.
+      </p>
+      <ul>
+        {
+          projects.map((project) => (
+            <Project title={project.title} description={project.description} url={project.url} />
+          ))
+        }
+      </ul>
+    </div>
+  </main>
+</Layout>

@@ -12,8 +12,8 @@ const {title, description, url} = Astro.props
 
 <li class="project">
   <h5 class="title">{title}</h5>
-  <span class="description">{description}</span>
-  <span class="link"><a href={url} target="_blank">Check it out!</a></span>
+  <p class="description">{description}</p>
+  <p class="link"><a href={url} target="_blank">Check it out!</a></p>
 </li>
 
 <style>
@@ -23,7 +23,7 @@ const {title, description, url} = Astro.props
     @apply mb-4;
   }
 
-  li.project > .title {
+  li.project > h5.title {
     @apply text-xl font-bold mb-2;
   }
 </style>

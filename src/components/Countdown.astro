@@ -1,0 +1,28 @@
+---
+const predeterminedDate = new Date('2024-11-07T00:00:00');
+const currentDate = new Date();
+let yearsDifference = 0;
+let monthsDifference = 0;
+let daysDifference = 0;
+
+yearsDifference = currentDate.getFullYear() - predeterminedDate.getFullYear();
+monthsDifference = currentDate.getMonth() - predeterminedDate.getMonth();
+daysDifference = currentDate.getDate() - predeterminedDate.getDate();
+
+if (monthsDifference < 0) {
+  monthsDifference += 12;
+  yearsDifference--;
+}
+
+if (daysDifference < 0) {
+  const lastMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
+  daysDifference += lastMonth.getDate();
+  monthsDifference--;
+}
+---
+
+<div class="flex flex-row justify-between items-center">
+  <p>{yearsDifference} year{yearsDifference !== 1 ? 's' : ''}</p>
+  <p>{monthsDifference} month{monthsDifference !== 1 ? 's' : ''}</p>
+  <p>{daysDifference} day{daysDifference !== 1 ? 's' : ''}</p>
+</div>

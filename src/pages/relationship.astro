@@ -1,18 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Countdown from '../components/Countdown.astro';
+import Countdown from "../components/Countdown.tsx";
 ---
 
 <Layout title="❤️">
   <main>
     <div>
       <h2 class="mb-4 text-2xl font-bold">Relationship</h2>
-      <p class="mb-4">
-        I love my girlfriend.
-      </p>
+      <p class="mb-4">I love my girlfriend.</p>
       <div>
-        <Countdown></Countdown>
-      </div> 
+        <Countdown client:load />
+      </div>
     </div>
   </main>
 </Layout>

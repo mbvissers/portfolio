@@ -1,19 +1,20 @@
-
 ---
-interface Props {
-  title: string,
-  description: string,
-  url: string,
+export interface ProjectProps {
+  title: string;
+  description: string;
+  url: string;
+  year: number;
 }
 
-const {title, description, url} = Astro.props
+const { title, description, url, year } = Astro.props.project as ProjectProps;
 ---
 
-
 <li class="project">
-  <h5 class="title">{title}</h5>
-  <p class="description">{description}</p>
-  <p class="link"><a href={url} target="_blank">Check it out!</a></p>
+  <h5 class="title">
+    {title}<span class="text-xs italic opacity-75">&nbsp;({year})</span>
+  </h5>
+  <span class="description">{description}</span>
+  <span class="link"><a href={url} target="_blank">Check it out!</a></span>
 </li>
 
 <style>

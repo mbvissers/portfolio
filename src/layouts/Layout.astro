@@ -15,6 +15,11 @@ const navLinks = [
     name: "Projects",
     path: "/projects",
   },
+  {
+    name: "Certifications 🚧",
+    path: "#",
+    disabled: true
+  }
 ];
 ---
 
@@ -42,7 +47,12 @@ const navLinks = [
     <div class="navbar mb-4">
       {
         navLinks.map((link) => (
-          <a class="mr-2" href={link.path}>
+        link.disabled ? 
+        <a class="mr-2 text-gray-700 cursor-not-allowed">
+          {link.name}
+        </a>
+      :
+        <a class="mr-2" href={link.path}>
             {link.name}
           </a>
         ))

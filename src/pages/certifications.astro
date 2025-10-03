@@ -1,0 +1,35 @@
+---
+import Certificate, { CertificateProps } from "../components/Certificate.astro";
+import Layout from "../layouts/Layout.astro";
+
+const certifications: CertificateProps[] = [
+  {
+    title: "Text Editing with Vim (SC100)",
+    description: "Vim text editor SkillCred by the Linux Foundation. It demonstrates foundational knowledge and skills in Vim.", 
+    image: 'skillcred-vim.png',
+    year: 2025,
+    month: "July"
+  }
+] 
+---
+
+<Layout title="Certifications">
+  <main>
+    <div>
+      <h2 class="mb-4 text-2xl font-bold">Certifications</h2>
+      <p class="mb-4">
+        This page shows the certificate and credentials I've
+        accumulated over the years. I love the idea of having 
+        certifications to actually benchmark my own skill level. 
+        It's a bit of a cure for imposter syndrome for me.
+      </p>
+    </div>
+    <ul>
+      {
+        certifications.map((cert) => 
+          <Certificate certificate={cert} />
+        )
+      }
+    </ul>
+  </main>
+</Layout>

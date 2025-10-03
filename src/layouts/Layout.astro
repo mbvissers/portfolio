@@ -6,7 +6,7 @@ interface Props {
 
 const { title } = Astro.props;
 
-const navLinks = [
+const navLinks: {name: string, path: string, disabled?: boolean}[] = [
   {
     name: "Home",
     path: "/",
@@ -16,9 +16,8 @@ const navLinks = [
     path: "/projects",
   },
   {
-    name: "Certifications 🚧",
-    path: "#",
-    disabled: true
+    name: "Certifications",
+    path: "/certifications",
   }
 ];
 ---

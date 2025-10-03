@@ -1,0 +1,39 @@
+---
+export interface CertificateProps {
+  title: string;
+  description: string;
+  url?: string;
+  image?: string;
+  year: number;
+  month?: string;
+}
+
+const { title, description, url, image, year, month } = Astro.props.certificate as CertificateProps;
+---
+
+<li class="certificate">
+  <div>
+    <h5 class="title">
+      {title}<span class="text-xs italic opacity-75">&nbsp;({year}{month ? ` - ${month}` : ''})</span>
+    </h5>
+    <span class="description">{description}</span>
+  </div>
+  <img class="cert-image" src={`./certificate-images/${image}`} />
+</li>
+
+<style>
+  @reference "../styles/global.css";
+
+  li.certificate {
+    @apply mb-4 flex flex-row items-center;
+  }
+
+  li.certificate > div > h5.title {
+    @apply text-xl font-bold mb-2;
+  }
+
+  li.certificate > img.cert-image {
+    @apply pl-4;
+    height: 64px;
+  }
+</style>

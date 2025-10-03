@@ -4,6 +4,11 @@ import Project, { type ProjectProps } from "../components/Project.astro";
 
 const projects: ProjectProps[] = [
   {
+    title: "Dotfiles.nix",
+    description:
+      "Using the Nix package manager for a more declaritive dotfiles experience. With the goal to learn Nix through and through.",
+  },
+  {
     title: "Arkana",
     description:
       "Arkana is an CLI flashcard application written in Rust. It has CSV support and uses the Clap and Ratatui libraries.",
@@ -37,7 +42,7 @@ const projects: ProjectProps[] = [
         language or framework, to having an interest in a topic and playing
         around with that.
       </p>
-      <ul>
+      <ul class="mt-8">
         {projects.map((project) => <Project project={project} />)}
       </ul>
     </div>

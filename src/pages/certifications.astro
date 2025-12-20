@@ -1,15 +1,22 @@
 ---
-import Certificate, { CertificateProps } from "../components/Certificate.astro";
+import Certificate, { type CertificateProps } from "../components/Certificate.astro";
 import Layout from "../layouts/Layout.astro";
 
 const certifications: CertificateProps[] = [
+  // {
+  //   title: "Open Data Formats: JSON (SC105)",
+  //   description: "This credential demonstrates my foundational knowledge and skills with the JSON data format and JSONPath querying.", 
+  //   image: 'skillcred-json.png',
+  //   year: 2025,
+  //   month: "October"
+  // },
   {
     title: "Text Editing with Vim (SC100)",
     description: "Vim text editor SkillCred by the Linux Foundation. It demonstrates foundational knowledge and skills in Vim.", 
     image: 'skillcred-vim.png',
     year: 2025,
     month: "July"
-  }
+  },
 ] 
 ---
 

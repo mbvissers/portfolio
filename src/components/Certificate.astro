@@ -14,7 +14,7 @@ const { title, description, url, image, year, month } = Astro.props.certificate 
 <li class="certificate">
   <div>
     <h5 class="title">
-      {title}<span class="text-xs italic opacity-75">&nbsp;({year}{month ? ` - ${month}` : ''})</span>
+	    {title}<span class="text-xs italic opacity-75">&nbsp;({month ? `${month}, ` : ''}{year})</span>
     </h5>
     <span class="description">{description}</span>
   </div>

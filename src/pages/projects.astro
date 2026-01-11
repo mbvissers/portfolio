@@ -4,6 +4,13 @@ import Project, { type ProjectProps } from "../components/Project.astro";
 
 const projects: ProjectProps[] = [
   {
+    title: "rsnake",
+    description:
+      "rsnake is a little Snake game in the terminal. Written in Rust while using the Crossterm library.",
+    url: "https://github.com/mbvissers/rsnake",
+    year: 2026,
+  },
+  {
     title: "Arkana",
     description:
       "Arkana is an CLI flashcard application written in Rust. It has CSV support and uses the Clap and Ratatui libraries.",
@@ -20,7 +27,10 @@ const projects: ProjectProps[] = [
   {
     title: "Dotfiles",
     description:
-      "My dotfiles are a public repository featuring some of my configuration files for my workstation. My Neovim config is my most precious config.",
+    `
+      My dotfiles are a public repository featuring some of my configuration files for my workstation. My Neovim config is my most precious config. 
+      Currently working on adding Nix Homemanager for easy installation of tools.
+    `,
     url: "https://github.com/mbvissers/dotfiles",
     year: 2025,
   },
